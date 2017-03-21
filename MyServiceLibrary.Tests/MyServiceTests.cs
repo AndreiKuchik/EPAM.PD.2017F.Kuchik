@@ -13,7 +13,7 @@ namespace MyServiceLibrary.Tests
         {
             User user = null;
 
-            MyService service = new MyService();
+            MasterService service = new MasterService();
             bool result = service.Add(user);
 
             Assert.AreEqual(false,result);
@@ -25,7 +25,7 @@ namespace MyServiceLibrary.Tests
             User user = new User("Name","Surname");
             User user1 = new User("Name1", "Surname1");
             
-            MyService service = new MyService(new CreateFirstMethodId());
+            MasterService service = new MasterService(new CreateFirstMethodId());
             service.Add(user);
             service.Add(user1);
             bool result = service.Add(user);
@@ -37,7 +37,7 @@ namespace MyServiceLibrary.Tests
         {
             User user = null;
 
-            MyService service = new MyService();
+            MasterService service = new MasterService();
             bool result = service.Remove(user);
 
             Assert.AreEqual(false, result);
@@ -50,7 +50,7 @@ namespace MyServiceLibrary.Tests
             User user1 = new User("Name1", "Surname1");
             User user2 = new User("Name2", "Surname2");
 
-            MyService service = new MyService(new CreateFirstMethodId());
+            MasterService service = new MasterService(new CreateFirstMethodId());
             service.Add(user);
             service.Add(user1);
             bool result = service.Remove(user2);
@@ -64,7 +64,7 @@ namespace MyServiceLibrary.Tests
             User user1 = new User("Name1", "Surname1");
             User user2 = new User("Name2", "Surname2");
 
-            MyService service = new MyService(new CreateFirstMethodId());
+            MasterService service = new MasterService(new CreateFirstMethodId());
             service.Add(user);
             service.Add(user1);
             service.Add(user2);
@@ -78,7 +78,7 @@ namespace MyServiceLibrary.Tests
         {
             string user = null;
 
-            MyService service = new MyService();
+            MasterService service = new MasterService();
             IEnumerable<User> result = service.SearchUser(service.SearchByName, user);
             Assert.AreEqual(null, result);
         }
@@ -88,7 +88,7 @@ namespace MyServiceLibrary.Tests
         {
             User user = new User("Name", "Surname");
 
-            MyService service = new MyService(new CreateFirstMethodId());
+            MasterService service = new MasterService(new CreateFirstMethodId());
             service.Add(user);
             IEnumerable<User> result = service.SearchUser(null, user.FirstName);
             Assert.AreEqual(null, result);

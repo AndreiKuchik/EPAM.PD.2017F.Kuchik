@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Id>1</Id>
+    <FirstName>Vasia</FirstName>
+    <LastName>Pupkin</LastName>
+  </User>
+  <User>
+    <Id>2</Id>
+    <FirstName>It</FirstName>
+    <LastName>Ki</LastName>
+  </User>
+  <User>
+    <Id>3</Id>
+    <FirstName>Gin</FirstName>
+    <LastName>Nun</LastName>
+  </User>
+</ArrayOfUser>

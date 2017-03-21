@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace MyServiceLibrary.CreateId
 {
-    public class CreateFirstMethodId:ICreateId
+    public class CreateFirstMethodId:CreateId
     {
+        public new int CurrentId { get; set; }
+
+        public CreateFirstMethodId():this(0)
+        {
+            
+        }
+
+        public CreateFirstMethodId(int currentId)
+        {
+            CurrentId = currentId;
+        }
 
         /// <summary>
         /// Generate Id second of method
         /// </summary>
         /// <returns></returns>
-        public int GenerateId()
+        public override int GenerateId()
         {
-            int newId;
-            if (ListUser.Instance.GetUsers().Count == 0)
-            {
-                return 1;
-            }
-            newId = ListUser.Instance.GetUsers().Last().Id;
-            newId ++;
-            return newId;
+           
+            return ++CurrentId;
         }
     }
 }

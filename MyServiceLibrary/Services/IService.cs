@@ -5,14 +5,15 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyServiceLibrary
+namespace MyServiceLibrary.Services
 {
     public interface IService
     {
-        bool Add(User user);
-        bool Remove(User user);
-        IEnumerable<User> SearchBySurname(string surname);
-        IEnumerable<User> SearchByName(string name);
+
+        void Add(User user);
+        void Remove(User user);
+        IEnumerable<User> Search(Predicate<User> searchObject);
+       
 
     }
 }

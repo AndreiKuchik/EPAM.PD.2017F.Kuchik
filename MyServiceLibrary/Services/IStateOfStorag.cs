@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyServiceLibrary
+namespace MyServiceLibrary.Services
 {
-    public interface ICreateId
+    public interface IStateOfStorag
     {
-        int GenerateId();
+        void GetStateStorage();
+        void SetStateStorage();
     }
 }
